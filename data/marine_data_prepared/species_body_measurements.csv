@@ -1,0 +1,60 @@
+species,common_name,wildlife_group,measure,sex,value,unit,reference
+Balaenoptera musculus,Blue whale,Whales,body_mass,Both,100000.0,kg,"Jefferson et al., 2015"
+Balaenoptera musculus,Blue whale,Whales,body_length,Both,25.0,m,"Jefferson et al., 2015"
+Eubalaena australis,Southern right whale,Whales,body_mass,Female,50000.0,kg,"Sequeira et al., 2018"
+Eubalaena australis,Southern right whale,Whales,body_mass,Male,72000.0,kg,"Sequeira et al., 2018"
+Eubalaena australis,Southern right whale,Whales,body_length,Female,14.0,m,-
+Eubalaena australis,Southern right whale,Whales,body_length,Male,14.5,m,-
+Megaptera novaeangliae,Humpback whale,Whales,body_mass,Both,30000.0,kg,"Jefferson et al., 2015"
+Megaptera novaeangliae,Humpback whale,Whales,body_length,Female,15.5,m,"Jefferson et al., 2015"
+Megaptera novaeangliae,Humpback whale,Whales,body_length,Male,15.7,m,M
+Orcinus orca,Killer whale,Dolphins,body_mass,Female,2050.0,kg,"Kastelein & Vaughan., 1989"
+Orcinus orca,Killer whale,Dolphins,body_mass,Male,4500.0,kg,"Kastelein & Vaughan., 1990"
+Orcinus orca,Killer whale,Dolphins,body_length,Female,6.0,m,"Pitman et al., 2007"
+Orcinus orca,Killer whale,Dolphins,body_length,Male,7.0,m,"Pitman et al., 2007"
+Physeter macrocephalus,Sperm whale,Whales,body_mass,Female,14000.0,kg,"Jefferson et al., 2015"
+Physeter macrocephalus,Sperm whale,Whales,body_mass,Male,41000.0,kg,"Jefferson et al., 2016"
+Physeter macrocephalus,Sperm whale,Whales,body_length,Female,11.0,m,"Jefferson et al., 2015"
+Physeter macrocephalus,Sperm whale,Whales,body_length,Male,16.0,m,"Jefferson et al., 2015"
+Tursiops truncatus,Bottlenose dolphin,Dolphins,body_mass,Both,175.0,kg,"Jefferson et al., 2015"
+Tursiops truncatus,Bottlenose dolphin,Dolphins,body_length,Both,2.95,m,"Jefferson et al., 2015"
+Carcharhinus leucas,Bull shark,Sharks,body_mass,Both,200.0,kg,"Brunnschweiler et al., 2017"
+Carcharhinus leucas,Bull shark,Sharks,body_length,Both,2.7,m,"Brunnschweiler et al., 2017"
+Carcharodon carcharias,White shark,Sharks,body_mass,Both,646.5,kg,"Kohler et al., 1996"
+Carcharodon carcharias,White shark,Sharks,body_length,Female,4.75,m,"Kohler et al., 1996"
+Carcharodon carcharias,White shark,Sharks,body_length,Male,3.7,m,"Kohler et al., 1996"
+Galeocerdo cuvier,Tiger shark,Sharks,body_mass,Both,176.0,kg,"Stevens & McLoughlin., 1991"
+Galeocerdo cuvier,Tiger shark,Sharks,body_length,Both,2.97,m,"Kohler et al., 1996"
+Rhincodon typus,Whale shark,Sharks,body_mass,Both,12226.5,kg,Wikipedia
+Rhincodon typus,Whale shark,Sharks,body_length,Both,6.13,m,Norman et al. 2017
+Sphyrna lewini,Scalloped hammerhead shark,Sharks,body_mass,Both,90.0,kg,"Kohler et al., 1996"
+Sphyrna lewini,Scalloped hammerhead shark,Sharks,body_length,Female,2.5,m,-
+Sphyrna lewini,Scalloped hammerhead shark,Sharks,body_length,Male,1.65,m,-
+Sphyrna mokarran,Great hammerhead shark,Sharks,body_mass,Both,230.0,kg,Wikipedia
+Sphyrna mokarran,Great hammerhead shark,Sharks,body_length,Both,3.5,m,Wikipedia
+Mirounga leonina,Southern elephant seal,Seals and sea lions,body_mass,Female,475.0,kg,"Jefferson et al., 2015"
+Mirounga leonina,Southern elephant seal,Seals and sea lions,body_mass,Male,2600.0,kg,"Jefferson et al., 2015"
+Mirounga leonina,Southern elephant seal,Seals and sea lions,body_length,Female,2.8,m,"Jefferson et al., 2015"
+Mirounga leonina,Southern elephant seal,Seals and sea lions,body_length,Male,5.15,m,"Jefferson et al., 2015"
+Neophoca cinerea,Australian sea lion,Seals and sea lions,body_mass,Female,84.3,kg,"Goldsworthy et al., 2014"
+Neophoca cinerea,Australian sea lion,Seals and sea lions,body_mass,Male,215.0,kg,"Jefferson et al., 2015"
+Neophoca cinerea,Australian sea lion,Seals and sea lions,body_length,Female,1.61,m,"Goldsworthy et al., 2014"
+Neophoca cinerea,Australian sea lion,Seals and sea lions,body_length,Male,2.07,m,"Goldsworthy et al., 2014"
+Caretta caretta,Loggerhead turtle,Turtles,body_mass,Both,135.0,kg,"Hirth., 1982"
+Caretta caretta,Loggerhead turtle,Turtles,body_length,Both,0.825,m,Hirth 1982
+Chelonia mydas,Green turtle,Turtles,body_mass,Both,98.5,kg,"Seminoff et al., 2003"
+Chelonia mydas,Green turtle,Turtles,body_length,Both,0.91,m,"Seminoff et al., 2003"
+Dermochelys coriacea,Leatherback turtle,Turtles,body_mass,Female,400.0,kg,"Sequeira et al., 2018"
+Dermochelys coriacea,Leatherback turtle,Turtles,body_mass,Male,475.0,kg,Wikipedia
+Dermochelys coriacea,Leatherback turtle,Turtles,body_length,Female,1.5,m,"Sequeira et al., 2018"
+Dermochelys coriacea,Leatherback turtle,Turtles,body_length,Male,1.52,m,"Dodge et al., 2014"
+Eretmochelys imbricata,Hawksbill turtle,Turtles,body_mass,Both,39.0,kg,"Pilcher., 1999"
+Eretmochelys imbricata,Hawksbill turtle,Turtles,body_length,Both,0.84,m,Witzell 1983
+Lepidochelys olivacea,Olive Ridley turtle,Turtles,body_mass,Female,35.45,kg,"Reichart., 1993"
+Lepidochelys olivacea,Olive Ridley turtle,Turtles,body_mass,Male,33.0,kg,"Reichart., 1994"
+Lepidochelys olivacea,Olive Ridley turtle,Turtles,body_length,Female,0.74,m,"Rees et al., 2012"
+Lepidochelys olivacea,Olive Ridley turtle,Turtles,body_length,Male,0.71,m,"Behera et al., 2016"
+Natator depressus,Flatback turtle,Turtles,body_mass,Female,100.0,kg,"Sequeira et al., 2018"
+Natator depressus,Flatback turtle,Turtles,body_mass,Male,80.0,kg,"Limpus & Fien., 2008"
+Natator depressus,Flatback turtle,Turtles,body_length,Female,0.9,m,"Sequeira et al., 2018"
+Natator depressus,Flatback turtle,Turtles,body_length,Male,0.86,m,"Limpus & Fien., 2008"

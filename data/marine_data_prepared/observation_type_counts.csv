@@ -1,0 +1,50 @@
+species,wildlife_group,basisOfRecord,records
+Balaenoptera musculus,Whales,HumanObservation,62
+Balaenoptera musculus,Whales,PreservedSpecimen,1
+Carcharhinus leucas,Sharks,HumanObservation,194
+Carcharhinus leucas,Sharks,MachineObservation,32569
+Carcharhinus leucas,Sharks,MaterialSample,7
+Carcharodon carcharias,Sharks,HumanObservation,519
+Carcharodon carcharias,Sharks,MachineObservation,9536
+Carcharodon carcharias,Sharks,MaterialSample,2
+Carcharodon carcharias,Sharks,PreservedSpecimen,206
+Caretta caretta,Turtles,HumanObservation,315
+Caretta caretta,Turtles,MachineObservation,6738
+Chelonia mydas,Turtles,HumanObservation,3337
+Chelonia mydas,Turtles,MachineObservation,116831
+Chelonia mydas,Turtles,MaterialSample,4
+Chelonia mydas,Turtles,PreservedSpecimen,51
+Dermochelys coriacea,Turtles,HumanObservation,35
+Dermochelys coriacea,Turtles,PreservedSpecimen,3
+Eretmochelys imbricata,Turtles,HumanObservation,370
+Eretmochelys imbricata,Turtles,PreservedSpecimen,13
+Eubalaena australis,Whales,HumanObservation,611
+Eubalaena australis,Whales,PreservedSpecimen,1
+Galeocerdo cuvier,Sharks,HumanObservation,347
+Galeocerdo cuvier,Sharks,MATERIAL_SAMPLE,3
+Galeocerdo cuvier,Sharks,MachineObservation,14539
+Galeocerdo cuvier,Sharks,MaterialSample,2
+Lepidochelys olivacea,Turtles,HumanObservation,561
+Lepidochelys olivacea,Turtles,PreservedSpecimen,1
+Megaptera novaeangliae,Whales,HumanObservation,23047
+Megaptera novaeangliae,Whales,MachineObservation,12
+Megaptera novaeangliae,Whales,PreservedSpecimen,1
+Mirounga leonina,Seals and sea lions,HumanObservation,145
+Natator depressus,Turtles,HumanObservation,131
+Neophoca cinerea,Seals and sea lions,HumanObservation,877
+Neophoca cinerea,Seals and sea lions,MachineObservation,29073
+Neophoca cinerea,Seals and sea lions,PreservedSpecimen,1
+Orcinus orca,Dolphins,HumanObservation,333
+Physeter macrocephalus,Whales,HumanObservation,116
+Physeter macrocephalus,Whales,PreservedSpecimen,1
+Rhincodon typus,Sharks,HumanObservation,356
+Rhincodon typus,Sharks,MachineObservation,2036
+Sphyrna lewini,Sharks,HumanObservation,87
+Sphyrna lewini,Sharks,MachineObservation,2052
+Sphyrna lewini,Sharks,MaterialSample,3
+Sphyrna mokarran,Sharks,HumanObservation,72
+Sphyrna mokarran,Sharks,MachineObservation,1255
+Sphyrna mokarran,Sharks,MaterialSample,8
+Tursiops truncatus,Dolphins,HumanObservation,378
+Tursiops truncatus,Dolphins,MachineObservation,1
+Tursiops truncatus,Dolphins,PreservedSpecimen,3

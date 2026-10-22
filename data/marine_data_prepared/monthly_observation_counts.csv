@@ -1,0 +1,223 @@
+species,wildlife_group,month,observation_records
+Balaenoptera musculus,Whales,4,6
+Balaenoptera musculus,Whales,5,34
+Balaenoptera musculus,Whales,6,17
+Balaenoptera musculus,Whales,7,1
+Balaenoptera musculus,Whales,9,1
+Balaenoptera musculus,Whales,10,2
+Balaenoptera musculus,Whales,11,1
+Carcharhinus leucas,Sharks,1,13
+Carcharhinus leucas,Sharks,2,29
+Carcharhinus leucas,Sharks,3,16
+Carcharhinus leucas,Sharks,4,4
+Carcharhinus leucas,Sharks,5,15
+Carcharhinus leucas,Sharks,6,9
+Carcharhinus leucas,Sharks,7,3
+Carcharhinus leucas,Sharks,8,7
+Carcharhinus leucas,Sharks,9,23
+Carcharhinus leucas,Sharks,10,11
+Carcharhinus leucas,Sharks,11,30
+Carcharhinus leucas,Sharks,12,34
+Carcharodon carcharias,Sharks,1,20
+Carcharodon carcharias,Sharks,2,29
+Carcharodon carcharias,Sharks,3,1
+Carcharodon carcharias,Sharks,4,18
+Carcharodon carcharias,Sharks,5,39
+Carcharodon carcharias,Sharks,6,34
+Carcharodon carcharias,Sharks,7,69
+Carcharodon carcharias,Sharks,8,73
+Carcharodon carcharias,Sharks,9,77
+Carcharodon carcharias,Sharks,10,84
+Carcharodon carcharias,Sharks,11,34
+Carcharodon carcharias,Sharks,12,41
+Caretta caretta,Turtles,1,57
+Caretta caretta,Turtles,2,32
+Caretta caretta,Turtles,3,27
+Caretta caretta,Turtles,4,18
+Caretta caretta,Turtles,5,7
+Caretta caretta,Turtles,6,29
+Caretta caretta,Turtles,7,23
+Caretta caretta,Turtles,8,17
+Caretta caretta,Turtles,9,14
+Caretta caretta,Turtles,10,21
+Caretta caretta,Turtles,11,24
+Caretta caretta,Turtles,12,46
+Chelonia mydas,Turtles,1,305
+Chelonia mydas,Turtles,2,204
+Chelonia mydas,Turtles,3,219
+Chelonia mydas,Turtles,4,303
+Chelonia mydas,Turtles,5,280
+Chelonia mydas,Turtles,6,336
+Chelonia mydas,Turtles,7,299
+Chelonia mydas,Turtles,8,272
+Chelonia mydas,Turtles,9,221
+Chelonia mydas,Turtles,10,329
+Chelonia mydas,Turtles,11,303
+Chelonia mydas,Turtles,12,266
+Dermochelys coriacea,Turtles,1,4
+Dermochelys coriacea,Turtles,2,6
+Dermochelys coriacea,Turtles,3,4
+Dermochelys coriacea,Turtles,4,3
+Dermochelys coriacea,Turtles,5,1
+Dermochelys coriacea,Turtles,6,2
+Dermochelys coriacea,Turtles,7,4
+Dermochelys coriacea,Turtles,8,3
+Dermochelys coriacea,Turtles,9,4
+Dermochelys coriacea,Turtles,11,1
+Dermochelys coriacea,Turtles,12,3
+Eretmochelys imbricata,Turtles,1,31
+Eretmochelys imbricata,Turtles,2,26
+Eretmochelys imbricata,Turtles,3,27
+Eretmochelys imbricata,Turtles,4,37
+Eretmochelys imbricata,Turtles,5,24
+Eretmochelys imbricata,Turtles,6,44
+Eretmochelys imbricata,Turtles,7,36
+Eretmochelys imbricata,Turtles,8,30
+Eretmochelys imbricata,Turtles,9,34
+Eretmochelys imbricata,Turtles,10,24
+Eretmochelys imbricata,Turtles,11,30
+Eretmochelys imbricata,Turtles,12,27
+Eubalaena australis,Whales,5,5
+Eubalaena australis,Whales,6,46
+Eubalaena australis,Whales,7,131
+Eubalaena australis,Whales,8,134
+Eubalaena australis,Whales,9,273
+Eubalaena australis,Whales,10,21
+Eubalaena australis,Whales,11,1
+Galeocerdo cuvier,Sharks,1,29
+Galeocerdo cuvier,Sharks,2,37
+Galeocerdo cuvier,Sharks,3,19
+Galeocerdo cuvier,Sharks,4,30
+Galeocerdo cuvier,Sharks,5,49
+Galeocerdo cuvier,Sharks,6,20
+Galeocerdo cuvier,Sharks,7,9
+Galeocerdo cuvier,Sharks,8,30
+Galeocerdo cuvier,Sharks,9,33
+Galeocerdo cuvier,Sharks,10,39
+Galeocerdo cuvier,Sharks,11,20
+Galeocerdo cuvier,Sharks,12,32
+Lepidochelys olivacea,Turtles,3,108
+Lepidochelys olivacea,Turtles,4,148
+Lepidochelys olivacea,Turtles,5,67
+Lepidochelys olivacea,Turtles,6,68
+Lepidochelys olivacea,Turtles,7,50
+Lepidochelys olivacea,Turtles,8,36
+Lepidochelys olivacea,Turtles,9,52
+Lepidochelys olivacea,Turtles,10,32
+Megaptera novaeangliae,Whales,1,15
+Megaptera novaeangliae,Whales,2,8
+Megaptera novaeangliae,Whales,3,21
+Megaptera novaeangliae,Whales,4,18
+Megaptera novaeangliae,Whales,5,265
+Megaptera novaeangliae,Whales,6,2817
+Megaptera novaeangliae,Whales,7,3669
+Megaptera novaeangliae,Whales,8,6054
+Megaptera novaeangliae,Whales,9,6127
+Megaptera novaeangliae,Whales,10,3568
+Megaptera novaeangliae,Whales,11,470
+Megaptera novaeangliae,Whales,12,15
+Mirounga leonina,Seals and sea lions,1,24
+Mirounga leonina,Seals and sea lions,2,5
+Mirounga leonina,Seals and sea lions,3,4
+Mirounga leonina,Seals and sea lions,4,6
+Mirounga leonina,Seals and sea lions,5,5
+Mirounga leonina,Seals and sea lions,6,11
+Mirounga leonina,Seals and sea lions,7,8
+Mirounga leonina,Seals and sea lions,8,24
+Mirounga leonina,Seals and sea lions,9,16
+Mirounga leonina,Seals and sea lions,10,14
+Mirounga leonina,Seals and sea lions,11,17
+Mirounga leonina,Seals and sea lions,12,11
+Natator depressus,Turtles,1,10
+Natator depressus,Turtles,2,5
+Natator depressus,Turtles,3,1
+Natator depressus,Turtles,5,10
+Natator depressus,Turtles,6,7
+Natator depressus,Turtles,7,10
+Natator depressus,Turtles,8,5
+Natator depressus,Turtles,9,12
+Natator depressus,Turtles,10,8
+Natator depressus,Turtles,11,38
+Natator depressus,Turtles,12,25
+Neophoca cinerea,Seals and sea lions,1,96
+Neophoca cinerea,Seals and sea lions,2,89
+Neophoca cinerea,Seals and sea lions,3,83
+Neophoca cinerea,Seals and sea lions,4,98
+Neophoca cinerea,Seals and sea lions,5,53
+Neophoca cinerea,Seals and sea lions,6,42
+Neophoca cinerea,Seals and sea lions,7,47
+Neophoca cinerea,Seals and sea lions,8,34
+Neophoca cinerea,Seals and sea lions,9,60
+Neophoca cinerea,Seals and sea lions,10,101
+Neophoca cinerea,Seals and sea lions,11,95
+Neophoca cinerea,Seals and sea lions,12,79
+Orcinus orca,Dolphins,1,130
+Orcinus orca,Dolphins,2,41
+Orcinus orca,Dolphins,3,36
+Orcinus orca,Dolphins,4,66
+Orcinus orca,Dolphins,5,7
+Orcinus orca,Dolphins,6,8
+Orcinus orca,Dolphins,7,5
+Orcinus orca,Dolphins,8,13
+Orcinus orca,Dolphins,9,4
+Orcinus orca,Dolphins,10,8
+Orcinus orca,Dolphins,11,8
+Orcinus orca,Dolphins,12,7
+Physeter macrocephalus,Whales,1,7
+Physeter macrocephalus,Whales,2,4
+Physeter macrocephalus,Whales,3,49
+Physeter macrocephalus,Whales,4,27
+Physeter macrocephalus,Whales,5,1
+Physeter macrocephalus,Whales,6,3
+Physeter macrocephalus,Whales,8,2
+Physeter macrocephalus,Whales,9,5
+Physeter macrocephalus,Whales,10,1
+Physeter macrocephalus,Whales,11,3
+Physeter macrocephalus,Whales,12,14
+Rhincodon typus,Sharks,1,136
+Rhincodon typus,Sharks,2,5
+Rhincodon typus,Sharks,3,12
+Rhincodon typus,Sharks,4,18
+Rhincodon typus,Sharks,5,16
+Rhincodon typus,Sharks,6,53
+Rhincodon typus,Sharks,7,29
+Rhincodon typus,Sharks,8,10
+Rhincodon typus,Sharks,9,10
+Rhincodon typus,Sharks,10,30
+Rhincodon typus,Sharks,11,15
+Rhincodon typus,Sharks,12,22
+Sphyrna lewini,Sharks,1,11
+Sphyrna lewini,Sharks,2,12
+Sphyrna lewini,Sharks,3,5
+Sphyrna lewini,Sharks,4,5
+Sphyrna lewini,Sharks,5,5
+Sphyrna lewini,Sharks,6,1
+Sphyrna lewini,Sharks,7,4
+Sphyrna lewini,Sharks,8,12
+Sphyrna lewini,Sharks,9,16
+Sphyrna lewini,Sharks,10,6
+Sphyrna lewini,Sharks,11,5
+Sphyrna lewini,Sharks,12,5
+Sphyrna mokarran,Sharks,1,6
+Sphyrna mokarran,Sharks,2,3
+Sphyrna mokarran,Sharks,4,4
+Sphyrna mokarran,Sharks,5,6
+Sphyrna mokarran,Sharks,6,4
+Sphyrna mokarran,Sharks,7,9
+Sphyrna mokarran,Sharks,8,11
+Sphyrna mokarran,Sharks,9,15
+Sphyrna mokarran,Sharks,10,3
+Sphyrna mokarran,Sharks,11,6
+Sphyrna mokarran,Sharks,12,5
+Tursiops truncatus,Dolphins,1,40
+Tursiops truncatus,Dolphins,2,30
+Tursiops truncatus,Dolphins,3,31
+Tursiops truncatus,Dolphins,4,28
+Tursiops truncatus,Dolphins,5,20
+Tursiops truncatus,Dolphins,6,17
+Tursiops truncatus,Dolphins,7,25
+Tursiops truncatus,Dolphins,8,33
+Tursiops truncatus,Dolphins,9,27
+Tursiops truncatus,Dolphins,10,52
+Tursiops truncatus,Dolphins,11,40
+Tursiops truncatus,Dolphins,12,35

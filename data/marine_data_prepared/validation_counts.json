@@ -1,0 +1,17 @@
+{
+  "original_obis_records": 387317,
+  "selected_species_records": 247521,
+  "usable_selected_records_all_observation_types": 246846,
+  "human_observation_records": 31893,
+  "selected_species_with_human_records": 20,
+  "geographic_cells": 281,
+  "body_measurements": 59,
+  "global_assessments": 20,
+  "interval_records_excluded": 634,
+  "explicitly_restricted_records_excluded": 41,
+  "query": {
+    "taxonid": "2688,136999,137000,231386,136976,368408",
+    "areaid": "8",
+    "startdate": "2015-01-01"
+  }
+}

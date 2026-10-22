@@ -1,0 +1,21 @@
+species,common_name,wildlife_group,assessment_scope,published_status,assessment_year,published_population_trend,current_status_verified
+Balaenoptera musculus,Blue whale,Whales,Global,EN,2018,Increasing,False
+Eubalaena australis,Southern right whale,Whales,Global,LC,2017,Unknown,False
+Megaptera novaeangliae,Humpback whale,Whales,Global,LC,2018,Increasing,False
+Orcinus orca,Killer whale,Dolphins,Global,DD,2017,Unknown,False
+Physeter macrocephalus,Sperm whale,Whales,Global,VU,2008,Unknown,False
+Tursiops truncatus,Bottlenose dolphin,Dolphins,Global,LC,2018,Unknown,False
+Carcharhinus leucas,Bull shark,Sharks,Global,VU,2020,Decreasing,False
+Carcharodon carcharias,White shark,Sharks,Global,VU,2018,Decreasing,False
+Galeocerdo cuvier,Tiger shark,Sharks,Global,NT,2018,Decreasing,False
+Rhincodon typus,Whale shark,Sharks,Global,EN,2016,Decreasing,False
+Sphyrna lewini,Scalloped hammerhead shark,Sharks,Global,CR,2018,Decreasing,False
+Sphyrna mokarran,Great hammerhead shark,Sharks,Global,CR,2018,Decreasing,False
+Mirounga leonina,Southern elephant seal,Seals and sea lions,Global,LC,2014,Stable,False
+Neophoca cinerea,Australian sea lion,Seals and sea lions,Global,EN,2014,Decreasing,False
+Caretta caretta,Loggerhead turtle,Turtles,Global,VU,2015,Decreasing,False
+Chelonia mydas,Green turtle,Turtles,Global,EN,2004,Decreasing,False
+Dermochelys coriacea,Leatherback turtle,Turtles,Global,VU,2013,Decreasing,False
+Eretmochelys imbricata,Hawksbill turtle,Turtles,Global,CR,2008,Decreasing,False
+Lepidochelys olivacea,Olive Ridley turtle,Turtles,Global,VU,2008,Decreasing,False
+Natator depressus,Flatback turtle,Turtles,Global,DD,1996,Unknown,False

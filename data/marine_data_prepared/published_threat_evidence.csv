@@ -1,0 +1,101 @@
+species,threat,published_code,interpretation
+Balaenoptera musculus,Sea surface temperature anomaly,M,Expert supplement
+Balaenoptera musculus,Plastic,A,Literature supplement: Avila et al.
+Balaenoptera musculus,Shipping,A,Literature supplement: Avila et al.
+Balaenoptera musculus,Noise pollution,A,Literature supplement: Avila et al.
+Balaenoptera musculus,Commercial fishing,-,No threat indicated in source
+Eubalaena australis,Sea surface temperature anomaly,A,Literature supplement: Avila et al.
+Eubalaena australis,Plastic,A,Literature supplement: Avila et al.
+Eubalaena australis,Shipping,X,Current threat in cited IUCN assessment
+Eubalaena australis,Noise pollution,X,Current threat in cited IUCN assessment
+Eubalaena australis,Commercial fishing,X,Current threat in cited IUCN assessment
+Megaptera novaeangliae,Sea surface temperature anomaly,A,Literature supplement: Avila et al.
+Megaptera novaeangliae,Plastic,A,Literature supplement: Avila et al.
+Megaptera novaeangliae,Shipping,X,Current threat in cited IUCN assessment
+Megaptera novaeangliae,Noise pollution,X,Current threat in cited IUCN assessment
+Megaptera novaeangliae,Commercial fishing,X,Current threat in cited IUCN assessment
+Orcinus orca,Sea surface temperature anomaly,F,Future threat in cited assessment
+Orcinus orca,Plastic,-,No threat indicated in source
+Orcinus orca,Shipping,X,Current threat in cited IUCN assessment
+Orcinus orca,Noise pollution,X,Current threat in cited IUCN assessment
+Orcinus orca,Commercial fishing,X,Current threat in cited IUCN assessment
+Physeter macrocephalus,Sea surface temperature anomaly,A,Literature supplement: Avila et al.
+Physeter macrocephalus,Plastic,X,Current threat in cited IUCN assessment
+Physeter macrocephalus,Shipping,X,Current threat in cited IUCN assessment
+Physeter macrocephalus,Noise pollution,X,Current threat in cited IUCN assessment
+Physeter macrocephalus,Commercial fishing,X,Current threat in cited IUCN assessment
+Tursiops truncatus,Sea surface temperature anomaly,-,No threat indicated in source
+Tursiops truncatus,Plastic,-,No threat indicated in source
+Tursiops truncatus,Shipping,X,Current threat in cited IUCN assessment
+Tursiops truncatus,Noise pollution,X,Current threat in cited IUCN assessment
+Tursiops truncatus,Commercial fishing,X,Current threat in cited IUCN assessment
+Carcharhinus leucas,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Carcharhinus leucas,Plastic,-,No threat indicated in source
+Carcharhinus leucas,Shipping,-,No threat indicated in source
+Carcharhinus leucas,Noise pollution,-,No threat indicated in source
+Carcharhinus leucas,Commercial fishing,X,Current threat in cited IUCN assessment
+Carcharodon carcharias,Sea surface temperature anomaly,-,No threat indicated in source
+Carcharodon carcharias,Plastic,M,Expert supplement
+Carcharodon carcharias,Shipping,-,No threat indicated in source
+Carcharodon carcharias,Noise pollution,-,No threat indicated in source
+Carcharodon carcharias,Commercial fishing,X,Current threat in cited IUCN assessment
+Galeocerdo cuvier,Sea surface temperature anomaly,M,Expert supplement
+Galeocerdo cuvier,Plastic,M,Expert supplement
+Galeocerdo cuvier,Shipping,-,No threat indicated in source
+Galeocerdo cuvier,Noise pollution,-,No threat indicated in source
+Galeocerdo cuvier,Commercial fishing,X,Current threat in cited IUCN assessment
+Rhincodon typus,Sea surface temperature anomaly,M,Expert supplement
+Rhincodon typus,Plastic,M,Expert supplement
+Rhincodon typus,Shipping,X,Current threat in cited IUCN assessment
+Rhincodon typus,Noise pollution,-,No threat indicated in source
+Rhincodon typus,Commercial fishing,X,Current threat in cited IUCN assessment
+Sphyrna lewini,Sea surface temperature anomaly,M,Expert supplement
+Sphyrna lewini,Plastic,-,No threat indicated in source
+Sphyrna lewini,Shipping,-,No threat indicated in source
+Sphyrna lewini,Noise pollution,-,No threat indicated in source
+Sphyrna lewini,Commercial fishing,X,Current threat in cited IUCN assessment
+Sphyrna mokarran,Sea surface temperature anomaly,M,Expert supplement
+Sphyrna mokarran,Plastic,-,No threat indicated in source
+Sphyrna mokarran,Shipping,-,No threat indicated in source
+Sphyrna mokarran,Noise pollution,-,No threat indicated in source
+Sphyrna mokarran,Commercial fishing,X,Current threat in cited IUCN assessment
+Mirounga leonina,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Mirounga leonina,Plastic,A,Literature supplement: Avila et al.
+Mirounga leonina,Shipping,-,No threat indicated in source
+Mirounga leonina,Noise pollution,-,No threat indicated in source
+Mirounga leonina,Commercial fishing,F,Future threat in cited assessment
+Neophoca cinerea,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Neophoca cinerea,Plastic,A,Literature supplement: Avila et al.
+Neophoca cinerea,Shipping,X,Current threat in cited IUCN assessment
+Neophoca cinerea,Noise pollution,-,No threat indicated in source
+Neophoca cinerea,Commercial fishing,X,Current threat in cited IUCN assessment
+Caretta caretta,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Caretta caretta,Plastic,X,Current threat in cited IUCN assessment
+Caretta caretta,Shipping,M,Expert supplement
+Caretta caretta,Noise pollution,-,No threat indicated in source
+Caretta caretta,Commercial fishing,X,Current threat in cited IUCN assessment
+Chelonia mydas,Sea surface temperature anomaly,M,Expert supplement
+Chelonia mydas,Plastic,M,Expert supplement
+Chelonia mydas,Shipping,M,Expert supplement
+Chelonia mydas,Noise pollution,-,No threat indicated in source
+Chelonia mydas,Commercial fishing,X,Current threat in cited IUCN assessment
+Dermochelys coriacea,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Dermochelys coriacea,Plastic,M,Expert supplement
+Dermochelys coriacea,Shipping,M,Expert supplement
+Dermochelys coriacea,Noise pollution,-,No threat indicated in source
+Dermochelys coriacea,Commercial fishing,X,Current threat in cited IUCN assessment
+Eretmochelys imbricata,Sea surface temperature anomaly,M,Expert supplement
+Eretmochelys imbricata,Plastic,M,Expert supplement
+Eretmochelys imbricata,Shipping,M,Expert supplement
+Eretmochelys imbricata,Noise pollution,-,No threat indicated in source
+Eretmochelys imbricata,Commercial fishing,X,Current threat in cited IUCN assessment
+Lepidochelys olivacea,Sea surface temperature anomaly,X,Current threat in cited IUCN assessment
+Lepidochelys olivacea,Plastic,X,Current threat in cited IUCN assessment
+Lepidochelys olivacea,Shipping,M,Expert supplement
+Lepidochelys olivacea,Noise pollution,-,No threat indicated in source
+Lepidochelys olivacea,Commercial fishing,X,Current threat in cited IUCN assessment
+Natator depressus,Sea surface temperature anomaly,W,Literature supplement: Wallace et al.
+Natator depressus,Plastic,W,Literature supplement: Wallace et al.
+Natator depressus,Shipping,M,Expert supplement
+Natator depressus,Noise pollution,-,No threat indicated in source
+Natator depressus,Commercial fishing,W,Literature supplement: Wallace et al.

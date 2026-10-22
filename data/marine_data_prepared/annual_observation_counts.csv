@@ -1,0 +1,225 @@
+species,wildlife_group,year,observation_records
+Balaenoptera musculus,Whales,2017,1
+Balaenoptera musculus,Whales,2018,2
+Balaenoptera musculus,Whales,2019,50
+Balaenoptera musculus,Whales,2020,1
+Balaenoptera musculus,Whales,2021,2
+Balaenoptera musculus,Whales,2023,2
+Balaenoptera musculus,Whales,2024,2
+Balaenoptera musculus,Whales,2025,2
+Carcharhinus leucas,Sharks,2015,18
+Carcharhinus leucas,Sharks,2016,15
+Carcharhinus leucas,Sharks,2017,26
+Carcharhinus leucas,Sharks,2018,23
+Carcharhinus leucas,Sharks,2019,19
+Carcharhinus leucas,Sharks,2020,4
+Carcharhinus leucas,Sharks,2021,47
+Carcharhinus leucas,Sharks,2022,6
+Carcharhinus leucas,Sharks,2023,3
+Carcharhinus leucas,Sharks,2024,10
+Carcharhinus leucas,Sharks,2025,14
+Carcharhinus leucas,Sharks,2026,9
+Carcharodon carcharias,Sharks,2015,30
+Carcharodon carcharias,Sharks,2016,78
+Carcharodon carcharias,Sharks,2017,212
+Carcharodon carcharias,Sharks,2018,105
+Carcharodon carcharias,Sharks,2019,10
+Carcharodon carcharias,Sharks,2020,6
+Carcharodon carcharias,Sharks,2021,18
+Carcharodon carcharias,Sharks,2022,26
+Carcharodon carcharias,Sharks,2023,7
+Carcharodon carcharias,Sharks,2024,6
+Carcharodon carcharias,Sharks,2025,13
+Carcharodon carcharias,Sharks,2026,8
+Caretta caretta,Turtles,2015,5
+Caretta caretta,Turtles,2016,8
+Caretta caretta,Turtles,2017,6
+Caretta caretta,Turtles,2018,14
+Caretta caretta,Turtles,2019,26
+Caretta caretta,Turtles,2020,21
+Caretta caretta,Turtles,2021,18
+Caretta caretta,Turtles,2022,25
+Caretta caretta,Turtles,2023,56
+Caretta caretta,Turtles,2024,48
+Caretta caretta,Turtles,2025,56
+Caretta caretta,Turtles,2026,32
+Chelonia mydas,Turtles,2015,107
+Chelonia mydas,Turtles,2016,63
+Chelonia mydas,Turtles,2017,110
+Chelonia mydas,Turtles,2018,103
+Chelonia mydas,Turtles,2019,151
+Chelonia mydas,Turtles,2020,145
+Chelonia mydas,Turtles,2021,166
+Chelonia mydas,Turtles,2022,264
+Chelonia mydas,Turtles,2023,475
+Chelonia mydas,Turtles,2024,599
+Chelonia mydas,Turtles,2025,750
+Chelonia mydas,Turtles,2026,404
+Dermochelys coriacea,Turtles,2016,4
+Dermochelys coriacea,Turtles,2020,3
+Dermochelys coriacea,Turtles,2022,5
+Dermochelys coriacea,Turtles,2023,5
+Dermochelys coriacea,Turtles,2024,5
+Dermochelys coriacea,Turtles,2025,5
+Dermochelys coriacea,Turtles,2026,8
+Eretmochelys imbricata,Turtles,2015,9
+Eretmochelys imbricata,Turtles,2016,9
+Eretmochelys imbricata,Turtles,2017,16
+Eretmochelys imbricata,Turtles,2018,11
+Eretmochelys imbricata,Turtles,2019,35
+Eretmochelys imbricata,Turtles,2020,9
+Eretmochelys imbricata,Turtles,2021,13
+Eretmochelys imbricata,Turtles,2022,26
+Eretmochelys imbricata,Turtles,2023,61
+Eretmochelys imbricata,Turtles,2024,73
+Eretmochelys imbricata,Turtles,2025,68
+Eretmochelys imbricata,Turtles,2026,40
+Eubalaena australis,Whales,2015,268
+Eubalaena australis,Whales,2016,13
+Eubalaena australis,Whales,2017,17
+Eubalaena australis,Whales,2018,28
+Eubalaena australis,Whales,2019,13
+Eubalaena australis,Whales,2020,12
+Eubalaena australis,Whales,2021,29
+Eubalaena australis,Whales,2022,50
+Eubalaena australis,Whales,2023,41
+Eubalaena australis,Whales,2024,51
+Eubalaena australis,Whales,2025,68
+Eubalaena australis,Whales,2026,21
+Galeocerdo cuvier,Sharks,2015,80
+Galeocerdo cuvier,Sharks,2016,6
+Galeocerdo cuvier,Sharks,2017,17
+Galeocerdo cuvier,Sharks,2018,37
+Galeocerdo cuvier,Sharks,2019,37
+Galeocerdo cuvier,Sharks,2020,65
+Galeocerdo cuvier,Sharks,2021,77
+Galeocerdo cuvier,Sharks,2022,4
+Galeocerdo cuvier,Sharks,2023,3
+Galeocerdo cuvier,Sharks,2024,5
+Galeocerdo cuvier,Sharks,2025,9
+Galeocerdo cuvier,Sharks,2026,7
+Lepidochelys olivacea,Turtles,2015,3
+Lepidochelys olivacea,Turtles,2016,2
+Lepidochelys olivacea,Turtles,2018,547
+Lepidochelys olivacea,Turtles,2021,2
+Lepidochelys olivacea,Turtles,2022,1
+Lepidochelys olivacea,Turtles,2023,3
+Lepidochelys olivacea,Turtles,2024,1
+Lepidochelys olivacea,Turtles,2025,2
+Megaptera novaeangliae,Whales,2015,547
+Megaptera novaeangliae,Whales,2016,651
+Megaptera novaeangliae,Whales,2017,1034
+Megaptera novaeangliae,Whales,2018,839
+Megaptera novaeangliae,Whales,2019,1143
+Megaptera novaeangliae,Whales,2020,1114
+Megaptera novaeangliae,Whales,2021,1347
+Megaptera novaeangliae,Whales,2022,2459
+Megaptera novaeangliae,Whales,2023,4445
+Megaptera novaeangliae,Whales,2024,4316
+Megaptera novaeangliae,Whales,2025,4375
+Megaptera novaeangliae,Whales,2026,777
+Mirounga leonina,Seals and sea lions,2016,1
+Mirounga leonina,Seals and sea lions,2017,2
+Mirounga leonina,Seals and sea lions,2018,1
+Mirounga leonina,Seals and sea lions,2019,1
+Mirounga leonina,Seals and sea lions,2020,3
+Mirounga leonina,Seals and sea lions,2021,8
+Mirounga leonina,Seals and sea lions,2022,12
+Mirounga leonina,Seals and sea lions,2023,34
+Mirounga leonina,Seals and sea lions,2024,27
+Mirounga leonina,Seals and sea lions,2025,48
+Mirounga leonina,Seals and sea lions,2026,8
+Natator depressus,Turtles,2015,3
+Natator depressus,Turtles,2016,3
+Natator depressus,Turtles,2017,11
+Natator depressus,Turtles,2018,1
+Natator depressus,Turtles,2019,8
+Natator depressus,Turtles,2020,2
+Natator depressus,Turtles,2021,9
+Natator depressus,Turtles,2023,41
+Natator depressus,Turtles,2024,28
+Natator depressus,Turtles,2025,19
+Natator depressus,Turtles,2026,6
+Neophoca cinerea,Seals and sea lions,2015,18
+Neophoca cinerea,Seals and sea lions,2016,15
+Neophoca cinerea,Seals and sea lions,2017,33
+Neophoca cinerea,Seals and sea lions,2018,39
+Neophoca cinerea,Seals and sea lions,2019,60
+Neophoca cinerea,Seals and sea lions,2020,38
+Neophoca cinerea,Seals and sea lions,2021,58
+Neophoca cinerea,Seals and sea lions,2022,74
+Neophoca cinerea,Seals and sea lions,2023,110
+Neophoca cinerea,Seals and sea lions,2024,100
+Neophoca cinerea,Seals and sea lions,2025,195
+Neophoca cinerea,Seals and sea lions,2026,137
+Orcinus orca,Dolphins,2015,32
+Orcinus orca,Dolphins,2016,26
+Orcinus orca,Dolphins,2017,9
+Orcinus orca,Dolphins,2018,2
+Orcinus orca,Dolphins,2019,6
+Orcinus orca,Dolphins,2020,15
+Orcinus orca,Dolphins,2021,6
+Orcinus orca,Dolphins,2022,50
+Orcinus orca,Dolphins,2023,16
+Orcinus orca,Dolphins,2024,20
+Orcinus orca,Dolphins,2025,28
+Orcinus orca,Dolphins,2026,123
+Physeter macrocephalus,Whales,2015,1
+Physeter macrocephalus,Whales,2016,2
+Physeter macrocephalus,Whales,2017,33
+Physeter macrocephalus,Whales,2018,7
+Physeter macrocephalus,Whales,2020,5
+Physeter macrocephalus,Whales,2021,13
+Physeter macrocephalus,Whales,2022,11
+Physeter macrocephalus,Whales,2023,13
+Physeter macrocephalus,Whales,2024,13
+Physeter macrocephalus,Whales,2025,6
+Physeter macrocephalus,Whales,2026,12
+Rhincodon typus,Sharks,2015,19
+Rhincodon typus,Sharks,2016,51
+Rhincodon typus,Sharks,2017,61
+Rhincodon typus,Sharks,2018,28
+Rhincodon typus,Sharks,2019,27
+Rhincodon typus,Sharks,2020,15
+Rhincodon typus,Sharks,2021,33
+Rhincodon typus,Sharks,2022,34
+Rhincodon typus,Sharks,2023,17
+Rhincodon typus,Sharks,2024,30
+Rhincodon typus,Sharks,2025,23
+Rhincodon typus,Sharks,2026,18
+Sphyrna lewini,Sharks,2015,3
+Sphyrna lewini,Sharks,2016,1
+Sphyrna lewini,Sharks,2017,13
+Sphyrna lewini,Sharks,2018,8
+Sphyrna lewini,Sharks,2019,14
+Sphyrna lewini,Sharks,2020,4
+Sphyrna lewini,Sharks,2021,13
+Sphyrna lewini,Sharks,2022,2
+Sphyrna lewini,Sharks,2023,5
+Sphyrna lewini,Sharks,2024,4
+Sphyrna lewini,Sharks,2025,7
+Sphyrna lewini,Sharks,2026,13
+Sphyrna mokarran,Sharks,2015,4
+Sphyrna mokarran,Sharks,2016,5
+Sphyrna mokarran,Sharks,2017,6
+Sphyrna mokarran,Sharks,2018,5
+Sphyrna mokarran,Sharks,2019,11
+Sphyrna mokarran,Sharks,2020,2
+Sphyrna mokarran,Sharks,2021,11
+Sphyrna mokarran,Sharks,2022,1
+Sphyrna mokarran,Sharks,2023,6
+Sphyrna mokarran,Sharks,2024,6
+Sphyrna mokarran,Sharks,2025,11
+Sphyrna mokarran,Sharks,2026,4
+Tursiops truncatus,Dolphins,2015,38
+Tursiops truncatus,Dolphins,2016,12
+Tursiops truncatus,Dolphins,2017,24
+Tursiops truncatus,Dolphins,2018,20
+Tursiops truncatus,Dolphins,2019,22
+Tursiops truncatus,Dolphins,2020,26
+Tursiops truncatus,Dolphins,2021,22
+Tursiops truncatus,Dolphins,2022,32
+Tursiops truncatus,Dolphins,2023,57
+Tursiops truncatus,Dolphins,2024,46
+Tursiops truncatus,Dolphins,2025,43
+Tursiops truncatus,Dolphins,2026,36
