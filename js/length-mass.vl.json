@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How do length and mass compare?",
+    "subtitle": "Marine mammals with matching length and mass estimates",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 380,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/species_body_measurements.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"value": "number"}
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.wildlife_group !== 'Turtles' && datum.wildlife_group !== 'Sharks'"
+    },
+    {
+      "pivot": "measure",
+      "value": "value",
+      "groupby": ["species", "common_name", "sex"],
+      "op": "max"
+    },
+    {
+      "filter": "datum.body_length > 0 && datum.body_mass > 0"
+    }
+  ],
+  "mark": {
+    "type": "point",
+    "filled": true,
+    "size": 130,
+    "opacity": 0.85
+  },
+  "encoding": {
+    "x": {
+      "field": "body_length",
+      "type": "quantitative",
+      "title": "Published adult length (m)",
+      "scale": {"zero": true},
+      "axis": {"tickCount": 6}
+    },
+    "y": {
+      "field": "body_mass",
+      "type": "quantitative",
+      "title": "Published adult mass (kg, logarithmic scale)",
+      "scale": {"type": "log"},
+      "axis": {
+        "values": [100, 1000, 10000, 100000],
+        "format": ","
+      }
+    },
+    "color": {
+      "field": "sex",
+      "type": "nominal",
+      "title": "Reported sex",
+      "scale": {
+        "domain": ["Female", "Male", "Both"],
+        "range": ["#a65678", "#247b91", "#656565"]
+      },
+      "legend": {"orient": "bottom"}
+    },
+    "shape": {
+      "field": "sex",
+      "type": "nominal",
+      "title": "Reported sex",
+      "scale": {
+        "domain": ["Female", "Male", "Both"],
+        "range": ["circle", "triangle-up", "square"]
+      },
+      "legend": {"orient": "bottom"}
+    },
+    "tooltip": [
+      {"field": "common_name", "title": "Species"},
+      {"field": "species", "title": "Scientific name"},
+      {"field": "sex", "title": "Reported sex"},
+      {
+        "field": "body_length",
+        "type": "quantitative",
+        "title": "Length (m)",
+        "format": ".2f"
+      },
+      {
+        "field": "body_mass",
+        "type": "quantitative",
+        "title": "Mass (kg)",
+        "format": ",.1f"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6edef"
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

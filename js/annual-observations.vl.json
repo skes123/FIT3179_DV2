@@ -1,0 +1,127 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How has recording activity changed?",
+    "subtitle": "Human observation records for the 20 selected species | 2026 is incomplete",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 340,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/annual_observation_counts.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "observation_records": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "observation_records",
+          "as": "annual_records"
+        }
+      ],
+      "groupby": ["year"]
+    },
+    {
+      "calculate": "datum.year === 2026 ? 'Partial year' : 'Full calendar year'",
+      "as": "coverage"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "scale": {"domain": [2015, 2026], "nice": false},
+      "axis": {
+        "format": "d",
+        "values": [
+          2015, 2016, 2017, 2018, 2019, 2020,
+          2021, 2022, 2023, 2024, 2025, 2026
+        ],
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "annual_records",
+      "type": "quantitative",
+      "title": "Human observation records",
+      "scale": {"zero": true},
+      "axis": {"format": ",.0f", "tickCount": 5}
+    }
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.year <= 2025"}],
+      "mark": {
+        "type": "line",
+        "color": "#247b91",
+        "strokeWidth": 3
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year >= 2025"}],
+      "mark": {
+        "type": "line",
+        "color": "#247b91",
+        "strokeWidth": 3,
+        "strokeDash": [6, 4]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "coverage",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Full calendar year", "Partial year"],
+            "range": ["#247b91", "#b76a37"]
+          },
+          "legend": {"orient": "bottom"}
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "annual_records",
+            "type": "quantitative",
+            "title": "Observation records",
+            "format": ",.0f"
+          },
+          {"field": "coverage", "title": "Period"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6edef"
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

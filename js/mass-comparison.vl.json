@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Comparing male and female body mass",
+    "subtitle": "Selected marine mammals with estimates for both sexes",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 320,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/species_body_measurements.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"value": "number"}
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.measure === 'body_mass' && datum.sex !== 'Both' && datum.wildlife_group !== 'Turtles' && datum.wildlife_group !== 'Sharks'"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Published adult mass (kg, logarithmic scale)",
+      "scale": {"type": "log", "domain": [50, 100000]},
+      "axis": {
+        "values": [100, 1000, 10000, 100000],
+        "format": ","
+    }
+    },
+    "y": {
+      "field": "common_name",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "value",
+        "op": "max",
+        "order": "descending"
+      },
+      "axis": {"labelLimit": 180}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#aab8bd",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "detail": {"field": "species"},
+        "order": {"field": "value", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 110,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "title": "Reported sex",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#a65678", "#247b91"]
+          },
+          "legend": {"orient": "bottom"}
+        },
+        "tooltip": [
+          {"field": "common_name", "title": "Species"},
+          {"field": "sex", "title": "Sex"},
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Mass (kg)",
+            "format": ",.1f"
+          },
+          {"field": "reference", "title": "Source reference"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6edef"
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

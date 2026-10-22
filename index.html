@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia's Marine Wildlife</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Australia's Marine Wildlife</h1>
+        <p>
+            Exploring the diversity, recorded locations and conservation
+            of 20 selected marine species.
+        </p>
+    </header>
+    
+    <nav aria-label="Page sections">
+        <a href="#meet-wildlife">Meet the wildlife</a>
+        <a href="#recorded-locations">Recorded locations</a>
+        <a href="#record-patterns">Recording patterns</a>
+        <a href="#conservation">Conservation</a>
+    </nav>
+
+    <main>
+        <section id="meet-wildlife">
+            <h2>Meet the wildlife</h2>
+            <p>
+                From whales and dolphins to turtles, seals and sharks, Australia’s
+                marine wildlife spans very different sizes and ways of life.
+                This visualisation explores 20 selected species through their
+                characteristics, recorded locations and conservation evidence.
+            </p>
+            <p>
+                Start by comparing marine mammals’ sizes, then explore observation
+                patterns for all five wildlife groups. Finally, examine their
+                reported threats and global conservation status.
+            </p>
+            <div id="body-length-chart"></div>
+            <p>
+                Size varies widely among these marine mammals. Hover over the bars
+                to explore their published adult lengths and source references.
+                “Both” indicates an estimate reported for both sexes together.
+                These values describe the species generally, rather than measurements
+                taken from the Australian observation records.
+            </p>
+
+            <div id="mass-comparison-chart"></div>
+            <p>
+                These five species have separate published male and female mass
+                estimates. Connected dots show the difference between those estimates,
+                rather than the range of weights within each species.
+                The mass axis uses a logarithmic scale: each labelled step represents
+                a tenfold increase, so wider gaps indicate larger mass ratios.
+            </p>
+            <div id="length-mass-chart"></div>
+            <p>
+                Each point pairs published length and mass estimates for the same
+                species and reported sex. These are species-level estimates, not
+                measurements of individual animals. Hover to identify each point.
+            </p>
+        </section>
+
+
+        <section id="recorded-locations">
+            <h2>Where wildlife is recorded</h2>
+            <p>
+                Explore human observation records for our 20 selected species around
+                Australia from 2015 to 2026. Recording effort varies between locations,
+                so more records do not necessarily mean more animals.
+            </p>
+            <div id="observation-map"></div>
+            <div id="species-grid-map"></div>
+            <p>
+                Each coloured cell shows how many of our 20 selected species have
+                human observation records there. Cells cover one degree of latitude
+                and longitude. Blank areas have no records in this selection;
+                they do not necessarily lack marine wildlife.
+            </p>
+            <div id="observation-totals-map"></div>
+            <p>
+                Circle area represents the number of human observation records
+                in each one-degree cell. Larger circles indicate more recording
+                activity. These totals are influenced by survey effort and
+                do not measure animal abundance.
+            </p>
+        </section>
+
+        <section id="record-patterns">
+            <h2>Patterns in the records</h2>
+            <p>
+                When are these species recorded? Explore monthly and yearly
+                patterns in the human observation records. These patterns also
+                reflect when and where people collect data.
+            </p>
+            <div id="monthly-heatmap"></div>
+            <p>
+                Darker cells show months containing a larger share of that species’
+                records. Percentages are calculated separately for each species,
+                making their recording patterns easier to compare despite different
+                totals. Survey timing affects these patterns, and 2026 is incomplete.
+                The chart alone cannot establish migration patterns.
+            </p>
+            <div id="annual-observations-chart"></div>
+            <p>
+                Annual totals show changes in recording activity across the selected
+                species. Differences can reflect survey effort and data availability.
+                The 2026 total covers only part of the year.
+            </p>
+        </section>
+
+        <section id="conservation">
+            <h2>Conservation and threats</h2>
+            <p>
+                Conservation status describes a species’ assessed risk of extinction.
+                Global assessments can differ from Australian legal listings and
+                from assessments of individual regional populations.
+            </p>
+            <div id="threats-chart"></div>
+            <p>
+                The five selected threat types are sea surface temperature anomalies,
+                plastic, shipping, noise pollution and commercial fishing.
+                This chart counts only entries marked “X”, meaning a current threat
+                in the historical IUCN assessment cited by MegaMove.
+                Other evidence codes are excluded. Zero means none of these five
+                threats was marked X; it does not mean the species faces no threats.
+                Counts describe documented threat types, not their severity.
+            </p>
+            <div id="conservation-status-chart"></div>
+            <p>
+                These categories describe global extinction risk for our selected
+                species. Vulnerable, Endangered and Critically Endangered are
+                threatened categories. Data Deficient means there is insufficient
+                information to assess risk.
+            </p>
+            <p>
+                The MegaMove categories include two confirmed updates: green turtle
+                to Least Concern in 2025, and southern elephant seal to Vulnerable
+                in IUCN’s April 2026 announcement. Global categories can conceal
+                regional declines and differ from Australian legal protection.
+            </p>
+            <div id="population-trend-chart"></div>
+            <p>
+                Each square represents one species, giving every species equal weight.
+                Trends come from assessments cited in MegaMove, with updates from
+                IUCN’s 2025 green turtle and 2026 southern elephant seal announcements.
+                Evidence dates differ between species; hover to see them.
+                Unknown means the population trend was not established.
+                These are global trends and may differ from Australian populations.
+            </p>
+            <h3>A diverse ocean, an uneven picture</h3>
+            <p>
+                These 20 species reveal contrasting body sizes, recording patterns
+                and conservation concerns. Observation maps show where evidence
+                has been collected, while conservation assessments help explain
+                the risks species face. Reading both together highlights the
+                importance of continued monitoring and protection.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+  <p><strong>Created by Shreya Kesavan | October 2026</strong></p>
+
+  <p>
+    <strong>Main datasets:</strong>
+    <a href="https://mapper.obis.org/?taxonid=2688,136999,137000,231386,136976,368408&amp;areaid=8&amp;startdate=2015-01-01"
+    target="_blank" rel="noopener">
+    OBIS — Australian marine wildlife records from 2015</a>
+    |
+    <a href="https://datadryad.org/dataset/doi:10.5061/dryad.x95x69ptv"
+       target="_blank" rel="noopener">MegaMove supplementary tables — Dryad</a>
+  </p>
+
+  <p>
+    <strong>Supporting sources:</strong>
+    <a href="https://www.iucn-mtsg.org/statuses"
+       target="_blank" rel="noopener">Marine turtle conservation status</a>
+    |
+    <a href="https://iucn.org/press-release/202510/arctic-seals-threatened-climate-change-birds-decline-globally-iucn-red-list"
+       target="_blank" rel="noopener">Green turtle update, 2025</a>
+    |
+    <a href="https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn"
+       target="_blank" rel="noopener">Southern elephant seal update, 2026</a>
+    |
+    <a href="https://github.com/topojson/world-atlas"
+       target="_blank" rel="noopener">Map boundaries — World Atlas / Natural Earth</a>
+  </p>
+
+  <p>
+    <strong>Data documentation:</strong>
+    <a href="data/marine_data_prepared/OBIS_source_citations.html"
+       target="_blank" rel="noopener">OBIS contributors and licences</a>
+    |
+    <a href="data/marine_data_prepared/README.txt"
+       target="_blank" rel="noopener">Preparation and limitations</a>
+    |
+    <a href="data/marine_data_prepared/research_references.csv">
+      Measurement references
+    </a>
+  </p>
+</footer>    

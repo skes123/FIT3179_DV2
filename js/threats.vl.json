@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How many selected threat types were documented?",
+    "subtitle": "Historical evidence compiled in MegaMove Table S4 | Five threat types considered",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 520,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/published_threat_evidence.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.published_code === 'X' ? 1 : 0",
+      "as": "documented"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "documented",
+          "as": "threat_count"
+        }
+      ],
+      "groupby": ["species"]
+    },
+    {
+      "lookup": "species",
+      "from": {
+        "data": {
+          "url": "data/marine_data_prepared/published_global_assessments_RECHECK.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "species",
+        "fields": ["common_name", "assessment_year"]
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "common_name",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "threat_count",
+        "order": "descending"
+      },
+      "axis": {"labelLimit": 200}
+    },
+    "x": {
+      "field": "threat_count",
+      "type": "quantitative",
+      "title": "Selected threat types marked X in the source",
+      "scale": {"domain": [0, 5], "nice": false},
+      "axis": {"values": [0, 1, 2, 3, 4, 5], "format": "d"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#aabfc5",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": {"datum": 0},
+        "x2": {"field": "threat_count"}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#247b91",
+        "size": 100,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "common_name", "title": "Species"},
+          {"field": "species", "title": "Scientific name"},
+          {
+            "field": "threat_count",
+            "type": "quantitative",
+            "title": "Threat types marked X (out of 5)",
+            "format": "d"
+          },
+          {
+            "field": "assessment_year",
+            "title": "Assessment year cited in MegaMove"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6edef"
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

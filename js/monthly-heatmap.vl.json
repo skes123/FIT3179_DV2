@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "When is each species recorded?",
+    "subtitle": "Monthly share of each species’ human observation records, pooled across 2015–2026",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 520,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/monthly_observation_counts.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "month": "number",
+        "observation_records": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "impute": "observation_records",
+      "key": "month",
+      "keyvals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "groupby": ["species", "wildlife_group"],
+      "value": 0
+    },
+    {
+      "lookup": "species",
+      "from": {
+        "data": {
+          "url": "data/marine_data_prepared/species_body_measurements.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "species",
+        "fields": ["common_name"]
+      }
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "observation_records",
+          "as": "species_total"
+        }
+      ],
+      "groupby": ["species"]
+    },
+    {
+      "calculate": "datum.observation_records / datum.species_total",
+      "as": "monthly_share"
+    },
+    {
+      "calculate": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.month - 1]",
+      "as": "month_name"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "ordinal",
+      "sort": "ascending",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value - 1]"
+      }
+    },
+    "y": {
+      "field": "common_name",
+      "type": "nominal",
+      "sort": "ascending",
+      "title": null,
+      "axis": {"labelLimit": 200}
+    },
+    "color": {
+      "field": "monthly_share",
+      "type": "quantitative",
+      "title": "Share of species’ records",
+      "scale": {
+        "scheme": "yellowgreenblue",
+        "zero": true
+      },
+      "legend": {
+        "orient": "bottom",
+        "format": ".0%"
+      }
+    },
+    "tooltip": [
+      {"field": "common_name", "title": "Species"},
+      {"field": "wildlife_group", "title": "Group"},
+      {"field": "month_name", "title": "Month"},
+      {
+        "field": "observation_records",
+        "type": "quantitative",
+        "title": "Observation records",
+        "format": ",.0f"
+      },
+      {
+        "field": "species_total",
+        "type": "quantitative",
+        "title": "Species total across all months",
+        "format": ",.0f"
+      },
+      {
+        "field": "monthly_share",
+        "type": "quantitative",
+        "title": "Share of species’ records",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "domain": false,
+      "ticks": false
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  }
+}

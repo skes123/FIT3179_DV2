@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Where is recording activity concentrated?",
+    "subtitle": "Circle area shows human observation totals per 1° cell, 2015–2026",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 500,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#eaf3f6",
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-134, 0, 0],
+    "parallels": [-18, -36],
+    "fit": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [108, -47],
+        [164, -47],
+        [164, -7],
+        [108, -7]
+      ]
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {"filter": "datum.properties.name === 'Australia'"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f7f6ef",
+        "stroke": "#738a94",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/marine_data_prepared/geographic_grid_summary.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "longitude": "number",
+            "latitude": "number",
+            "observation_records": "number",
+            "recorded_selected_species": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "window": [
+            {"op": "row_number", "as": "draw_order"}
+          ],
+          "sort": [
+            {"field": "observation_records", "order": "descending"}
+          ]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#247b91",
+        "fillOpacity": 0.35,
+        "stroke": "#125969",
+        "strokeWidth": 0.7,
+        "clip": true
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "observation_records",
+          "type": "quantitative",
+          "title": "Observation records",
+          "scale": {
+            "type": "linear",
+            "zero": true,
+            "range": [0, 1800]
+          },
+          "legend": {
+            "orient": "bottom",
+            "format": ",.0f",
+            "symbolFillColor": "#247b91"
+          }
+        },
+        "order": {
+          "field": "draw_order",
+          "type": "quantitative",
+          "sort": "ascending"
+        },
+        "tooltip": [
+          {
+            "field": "observation_records",
+            "type": "quantitative",
+            "title": "Observation records",
+            "format": ","
+          },
+          {
+            "field": "recorded_selected_species",
+            "type": "quantitative",
+            "title": "Selected species recorded",
+            "format": "d"
+          },
+          {
+            "field": "longitude",
+            "type": "quantitative",
+            "title": "Cell centre longitude",
+            "format": ".1f"
+          },
+          {
+            "field": "latitude",
+            "type": "quantitative",
+            "title": "Cell centre latitude",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  }
+}

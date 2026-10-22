@@ -1,0 +1,127 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Where were more selected species recorded?",
+    "subtitle": "Distinct selected species per 1° cell | Human observations, 2015–2026",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 500,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#eaf3f6",
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-134, 0, 0],
+    "parallels": [-18, -36],
+    "fit": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [108, -47],
+        [164, -47],
+        [164, -7],
+        [108, -7]
+      ]
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/marine_data_prepared/geographic_grid_summary.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "cell_lon": "number",
+            "cell_lat": "number",
+            "recorded_selected_species": "number",
+            "observation_records": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "{type: 'Polygon', coordinates: [[[datum.cell_lon, datum.cell_lat], [datum.cell_lon, datum.cell_lat + 1], [datum.cell_lon + 1, datum.cell_lat + 1], [datum.cell_lon + 1, datum.cell_lat], [datum.cell_lon, datum.cell_lat]]]}",
+          "as": "cell_geometry"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "shape": {
+          "field": "cell_geometry",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "recorded_selected_species",
+          "type": "quantitative",
+          "title": "Selected species recorded",
+          "scale": {
+            "scheme": "yellowgreenblue",
+            "zero": false
+          },
+          "legend": {
+            "orient": "bottom",
+            "format": "d",
+            "tickMinStep": 1
+          }
+        },
+        "tooltip": [
+          {
+            "field": "recorded_selected_species",
+            "type": "quantitative",
+            "title": "Selected species recorded",
+            "format": "d"
+          },
+          {
+            "field": "observation_records",
+            "type": "quantitative",
+            "title": "Observation records",
+            "format": ","
+          },
+          {
+            "field": "cell_lon",
+            "type": "quantitative",
+            "title": "Cell western edge (°)"
+          },
+          {
+            "field": "cell_lat",
+            "type": "quantitative",
+            "title": "Cell southern edge (°)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {"filter": "datum.properties.name === 'Australia'"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f7f6ef",
+        "stroke": "#738a94",
+        "strokeWidth": 1
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  }
+}

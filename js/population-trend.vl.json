@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "What population trends have been reported?",
+    "subtitle": "One square = one selected species | Hover for evidence dates",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 240,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "data": {
+    "url": "data/marine_data_prepared/published_global_assessments_RECHECK.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.species === 'Chelonia mydas' ? 'Increasing' : datum.species === 'Mirounga leonina' ? 'Decreasing' : datum.published_population_trend",
+      "as": "reported_trend"
+    },
+    {
+      "calculate": "datum.species === 'Chelonia mydas' ? 'IUCN announcement, October 2025' : datum.species === 'Mirounga leonina' ? 'IUCN announcement, April 2026' : 'Assessment cited in MegaMove: ' + datum.assessment_year",
+      "as": "evidence_date"
+    },
+    {
+      "calculate": "datum.reported_trend === 'Decreasing' ? 1 : datum.reported_trend === 'Stable' ? 2 : datum.reported_trend === 'Increasing' ? 3 : 4",
+      "as": "trend_order"
+    },
+    {
+      "window": [
+        {"op": "row_number", "as": "position"}
+      ],
+      "sort": [
+        {"field": "trend_order", "order": "ascending"},
+        {"field": "common_name", "order": "ascending"}
+      ]
+    },
+    {
+      "calculate": "(datum.position - 1) % 10",
+      "as": "column"
+    },
+    {
+      "calculate": "floor((datum.position - 1) / 10)",
+      "as": "row"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 4,
+    "cornerRadius": 4
+  },
+  "encoding": {
+    "x": {
+      "field": "column",
+      "type": "ordinal",
+      "sort": "ascending",
+      "axis": null,
+      "scale": {"paddingInner": 0.04}
+    },
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "sort": "ascending",
+      "axis": null,
+      "scale": {"paddingInner": 0.04}
+    },
+    "color": {
+      "field": "reported_trend",
+      "type": "nominal",
+      "title": "Reported global trend",
+      "scale": {
+        "domain": ["Decreasing", "Stable", "Increasing", "Unknown"],
+        "range": ["#b34e69", "#d1b36a", "#39845a", "#aab7c0"]
+      },
+      "legend": {
+        "orient": "bottom",
+        "columns": 2,
+        "labelFontSize": 12,
+        "titleFontSize": 12
+      }
+    },
+    "tooltip": [
+      {"field": "common_name", "title": "Species"},
+      {"field": "species", "title": "Scientific name"},
+      {"field": "reported_trend", "title": "Reported global trend"},
+      {"field": "evidence_date", "title": "Evidence date"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

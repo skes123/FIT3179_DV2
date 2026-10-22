@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Where have these species been recorded?",
+    "subtitle": "Human observation records, 2015–2026 | Source: OBIS",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 500,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "background": "#eaf3f6",
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-134, 0, 0],
+    "parallels": [-18, -36],
+    "fit": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [108, -47],
+        [164, -47],
+        [164, -7],
+        [108, -7]
+      ]
+    }
+  },
+  "params": [
+    {
+      "name": "chosenSpecies",
+      "value": "Megaptera novaeangliae",
+      "bind": {
+        "input": "select",
+        "name": "Species: ",
+        "options": [
+          "All",
+          "Megaptera novaeangliae",
+          "Balaenoptera musculus",
+          "Eubalaena australis",
+          "Physeter macrocephalus",
+          "Tursiops truncatus",
+          "Orcinus orca",
+          "Neophoca cinerea",
+          "Mirounga leonina",
+          "Chelonia mydas",
+          "Caretta caretta",
+          "Natator depressus",
+          "Eretmochelys imbricata",
+          "Dermochelys coriacea",
+          "Lepidochelys olivacea",
+          "Carcharodon carcharias",
+          "Rhincodon typus",
+          "Galeocerdo cuvier",
+          "Carcharhinus leucas",
+          "Sphyrna mokarran",
+          "Sphyrna lewini"
+        ],
+        "labels": [
+          "All selected species",
+          "Humpback whale",
+          "Blue whale",
+          "Southern right whale",
+          "Sperm whale",
+          "Bottlenose dolphin",
+          "Killer whale",
+          "Australian sea lion",
+          "Southern elephant seal",
+          "Green turtle",
+          "Loggerhead turtle",
+          "Flatback turtle",
+          "Hawksbill turtle",
+          "Leatherback turtle",
+          "Olive ridley turtle",
+          "White shark",
+          "Whale shark",
+          "Tiger shark",
+          "Bull shark",
+          "Great hammerhead shark",
+          "Scalloped hammerhead shark"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {"filter": "datum.properties.name === 'Australia'"}
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f7f6ef",
+        "stroke": "#738a94",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/marine_data_prepared/human_observations.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "longitude": "number",
+            "latitude": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "chosenSpecies === 'All' || datum.species === chosenSpecies"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 18,
+        "opacity": 0.35,
+        "clip": true
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "wildlife_group",
+          "type": "nominal",
+          "title": "Wildlife group",
+          "scale": {
+            "domain": [
+              "Whales",
+              "Dolphins",
+              "Seals and sea lions",
+              "Turtles",
+              "Sharks"
+            ],
+            "range": [
+              "#247b91",
+              "#7965a8",
+              "#b76a37",
+              "#39845a",
+              "#b34e69"
+            ]
+          },
+          "legend": {"orient": "bottom", "columns": 3}
+        },
+        "tooltip": [
+          {"field": "species", "title": "Scientific name"},
+          {"field": "wildlife_group", "title": "Group"},
+          {"field": "observation_date", "title": "Recorded date"},
+          {
+            "field": "latitude",
+            "type": "quantitative",
+            "title": "Latitude",
+            "format": ".3f"
+          },
+          {
+            "field": "longitude",
+            "type": "quantitative",
+            "title": "Longitude",
+            "format": ".3f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    },
+    "legend": {"labelFontSize": 12}
+  }
+}

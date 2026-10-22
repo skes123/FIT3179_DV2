@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "How large are Australia's marine mammals?",
+    "subtitle": "Published adult lengths; separate sex estimates shown where available",
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": 420,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/marine_data_prepared/species_body_measurements.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"value": "number"}
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.measure === 'body_length' && datum.wildlife_group !== 'Turtles' && datum.wildlife_group !== 'Sharks'"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "common_name",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "value",
+        "op": "max",
+        "order": "descending"
+      },
+      "axis": {"labelLimit": 180}
+    },
+    "yOffset": {
+      "field": "sex",
+      "sort": ["Female", "Male", "Both"]
+    },
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Adult length (metres)",
+      "scale": {"zero": true},
+      "axis": {"tickCount": 6}
+    },
+    "color": {
+      "field": "sex",
+      "type": "nominal",
+      "title": "Reported sex",
+      "scale": {
+        "domain": ["Female", "Male", "Both"],
+        "range": ["#a65678", "#247b91", "#656565"]
+      },
+      "legend": {"orient": "bottom"}
+    },
+    "tooltip": [
+      {"field": "common_name", "title": "Species"},
+      {"field": "species", "title": "Scientific name"},
+      {"field": "sex", "title": "Reported sex"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Length (m)",
+        "format": ".2f"
+      },
+      {"field": "reference", "title": "Source reference"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6edef"
+    },
+    "title": {
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "offset": 18
+    }
+  }
+}

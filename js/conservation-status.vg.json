@@ -1,0 +1,187 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Global status categories from MegaMove, with confirmed green turtle and southern elephant seal updates.",
+  "height": 320,
+  "padding": 10,
+  "autosize": {"type": "fit", "contains": "padding", "resize": true},
+  "signals": [
+    {
+      "name": "width",
+      "init": "containerSize()[0] || 800",
+      "on": [
+        {
+          "events": "window:resize",
+          "update": "containerSize()[0] || 800"
+        }
+      ]
+    }
+  ],
+  "title": {
+    "text": "How are our selected species classified globally?",
+    "subtitle": "Rectangle area represents species count | Hover for species names",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 18
+  },
+  "data": [
+    {
+      "name": "species",
+      "url": "data/marine_data_prepared/published_global_assessments_RECHECK.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.species === 'Chelonia mydas' ? 'LC' : datum.species === 'Mirounga leonina' ? 'VU' : datum.published_status",
+          "as": "status"
+        }
+      ]
+    },
+    {
+      "name": "counts",
+      "source": "species",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["status"],
+          "ops": ["count", "values"],
+          "fields": ["species", "species"],
+          "as": ["count", "members"]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.status",
+          "as": "id"
+        },
+        {
+          "type": "formula",
+          "expr": "'All'",
+          "as": "parent"
+        },
+        {
+          "type": "formula",
+          "expr": "join(pluck(datum.members, 'common_name'), ', ')",
+          "as": "species_names"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.status === 'CR' ? 'Critically Endangered' : datum.status === 'EN' ? 'Endangered' : datum.status === 'VU' ? 'Vulnerable' : datum.status === 'NT' ? 'Near Threatened' : datum.status === 'LC' ? 'Least Concern' : 'Data Deficient'",
+          "as": "status_name"
+        }
+      ]
+    },
+    {
+      "name": "status_root",
+      "values": [{"id": "All", "parent": null, "count": 0}]
+    },
+    {
+      "name": "tree",
+      "source": ["status_root", "counts"],
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "count",
+          "sort": {"field": "value", "order": "descending"},
+          "method": "binary",
+          "round": true,
+          "paddingInner": 4,
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {"type": "filter", "expr": "!datum.children"}
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "statusColor",
+      "type": "ordinal",
+      "domain": ["CR", "EN", "VU", "NT", "LC", "DD"],
+      "range": [
+        "#9e2443",
+        "#c84c46",
+        "#e6a348",
+        "#e6d58a",
+        "#66a58b",
+        "#aab7c0"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "leaves"},
+      "encode": {
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "statusColor", "field": "status"},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 2},
+          "tooltip": {
+            "signal": "{'Global status': datum.status_name, 'Species count': datum.count, 'Share of selected species': format(datum.count / 20, '.0%'), 'Species': datum.species_names}"
+          }
+        },
+        "hover": {
+          "stroke": {"value": "#193441"},
+          "strokeWidth": {"value": 3}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {"signal": "(datum.x0 + datum.x1) / 2"},
+          "y": {"signal": "(datum.y0 + datum.y1) / 2 - 10"},
+          "text": {"field": "status_name"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "font": {"value": "Arial"},
+          "fontSize": {"value": 14},
+          "fontWeight": {"value": "bold"},
+          "limit": {"signal": "max(0, datum.x1 - datum.x0 - 16)"},
+          "fill": {
+            "signal": "datum.status === 'CR' || datum.status === 'EN' ? 'white' : '#193441'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {"signal": "(datum.x0 + datum.x1) / 2"},
+          "y": {"signal": "(datum.y0 + datum.y1) / 2 + 14"},
+          "text": {
+            "signal": "datum.count + (datum.count === 1 ? ' species (5%)' : ' species (' + format(datum.count / 20, '.0%') + ')')"
+          },
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "font": {"value": "Arial"},
+          "fontSize": {"value": 13},
+          "limit": {"signal": "max(0, datum.x1 - datum.x0 - 16)"},
+          "fill": {
+            "signal": "datum.status === 'CR' || datum.status === 'EN' ? 'white' : '#193441'"
+          }
+        }
+      }
+    }
+  ]
+}
