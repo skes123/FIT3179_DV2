@@ -19,10 +19,14 @@
     }
   },
   "transform": [
-    {
-      "filter": "datum.measure === 'body_length' && datum.wildlife_group !== 'Turtles' && datum.wildlife_group !== 'Sharks'"
-    }
-  ],
+  {
+    "filter": "datum.measure === 'body_length' && datum.wildlife_group !== 'Turtles' && datum.wildlife_group !== 'Sharks'"
+  },
+  {
+    "calculate": "datum.reference === 'M' ? 'Expert knowledge (MegaMove code M)' : datum.reference === '-' || !datum.reference ? 'Not specified in MegaMove table' : datum.reference",
+    "as": "reference_label"
+  }
+],
   "mark": {
     "type": "bar",
     "cornerRadiusEnd": 3
@@ -70,7 +74,7 @@
         "title": "Length (m)",
         "format": ".2f"
       },
-      {"field": "reference", "title": "Source reference"}
+      {"field": "reference_label", "title": "Source reference"}
     ]
   },
   "config": {

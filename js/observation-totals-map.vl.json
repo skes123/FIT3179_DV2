@@ -89,7 +89,7 @@
           "scale": {
             "type": "linear",
             "zero": true,
-            "range": [0, 1800]
+            "range": [0, 600]
           },
           "legend": {
             "orient": "bottom",
